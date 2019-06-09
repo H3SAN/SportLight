@@ -5,23 +5,54 @@
       <v-layout>
           <!-- Toolbar and menu begins -->
         <v-flex xs12 sm6 offset-sm0>
-          <v-navigation-drawer icon v-model="drawer" clipped app>
-          </v-navigation-drawer>
           <v-toolbar color="orange" dense fixed clipped-left app>
             <v-toolbar-side-icon icon @click.stop="drawer = !drawer">
             </v-toolbar-side-icon>
             <v-layout justify-center align-center>
             <v-flex xs10>
-              <v-btn flat v-on:click='home'>Football</v-btn>
-              <v-btn flat v-on:click='about'>Basketball</v-btn>
-              <v-btn flat v-on:click='con'>Hockey</v-btn>
-              <v-btn flat v-on:click='prog'>Tennis</v-btn>
-              <v-btn flat v-on:click='staff'>Rugby</v-btn>
-              <v-btn flat v-on:click='faq'>Quiz</v-btn>
+              <v-tabs left color="transparent" text>
+                <v-tabs-slider color="white"></v-tabs-slider>
+                <v-tab v-on:click='home'>Home</v-tab>
+                <v-tab v-on:click='foot'>Football</v-tab>
+                <v-tab v-on:click='bask'>Basketball</v-tab>
+                <v-tab v-on:click='hoc'>Hockey</v-tab>
+                <v-tab v-on:click='ten'>Tennis</v-tab>
+                <v-tab v-on:click='rug'>Rugby</v-tab>
+                <v-tab v-on:click='qui'>Quiz</v-tab>
+              </v-tabs>
             </v-flex>
             </v-layout>
             <v-spacebar></v-spacebar>
           </v-toolbar>
+          <v-navigation-drawer icon v-model="drawer" clipped fixed app>
+            <v-list>
+              <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>note</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Featured</v-list-tile-title>
+                   </v-list-content>
+               </v-list-tile>
+               <v-divider horizontal></v-divider>
+               <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>person_add</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Login</v-list-tile-title>
+                   </v-list-content>
+               </v-list-tile>
+               <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>settings</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Settings</v-list-tile-title>
+                   </v-list-content>
+               </v-list-tile>
+            </v-list>
+          </v-navigation-drawer>
         </v-flex>
       </v-layout>
         <!--toolbar and menu ends-->
@@ -32,28 +63,9 @@
           <v-content>
           <v-carousel>
                 <v-carousel-item
-                    :src="images.pic2"
-                    transition="transition"
-                    reverse-transition="reverseTransition"
-                ></v-carousel-item>
-                <v-carousel-item
-                    :src="images.pic3"
-                    transition="transition"
-                    reverse-transition="reverseTransition"
-                ></v-carousel-item>
-                <v-carousel-item
-                    :src="images.pic4"
-                    transition="transition"
-                    reverse-transition="reverseTransition"
-                ></v-carousel-item>
-                <v-carousel-item
-                    :src="images.pic5"
-                    transition="transition"
-                    reverse-transition="reverseTransition"
-                ></v-carousel-item><v-carousel-item
-                    :src="images.pic6"
-                    transition="transition"
-                    reverse-transition="reverseTransition"
+                 v-for="(image, i) in images"
+                    :key="i"
+                    :src="image.pic"
                 ></v-carousel-item>
             </v-carousel>
           </v-content>
@@ -74,7 +86,7 @@
                  <v-toolbar height="50px" color="amber">
                      <v-text><h2>Headlines: we put a very important news here</h2></v-text>
                  </v-toolbar>
-                 <v-card-media :src="images.trew" d-inline style="height:250px; width:250px; "></v-card-media>
+                 <v-card-media :src="photos.trew" d-inline style="height:250px; width:250px; "></v-card-media>
                  <v-card-text>
                      <p>rvhzdvinuvnuidnruiofndorfvndonv;jdnrvjne;vnzio</p>
                  </v-card-text>
@@ -85,7 +97,7 @@
                  <v-toolbar height="50px" color="amber">
                      <v-text><h2>Headlines: we put a very important news here</h2></v-text>
                  </v-toolbar>
-                 <v-card-media :src="images.trew" d-inline style="height:250px; width:250px;"></v-card-media>
+                 <v-card-media :src="photos.trew" d-inline style="height:250px; width:250px;"></v-card-media>
                  <v-card-text>
                      <p>rvhzdvinuvnuidnruiofndorfvndonv;jdnrvjne;vnzio</p>
                  </v-card-text>
@@ -111,36 +123,54 @@
 <script>
 export default{
   data: () => ({
-    drawer: null,
-    images: {
-    //    pdf: require('../assets/don.txt'),
-      pic1: require('../assets/one.jpeg'),
-      pic2: require('../assets/two.jpeg'),
-      pic3: require('../assets/three.jpeg'),
-      pic4: require('../assets/four.jpeg'),
-      pic5: require('../assets/five.jpeg'),
-      pic6: require('../assets/champions.jpg'),
+    images: [
+      {
+        //  pdf: require('../assets/don.txt'),
+        pic: require('../assets/one.jpeg')
+      },
+      {
+        pic: require('../assets/two.jpeg')
+      },
+      {
+        pic: require('../assets/three.jpeg')
+      },
+      {
+        pic: require('../assets/four.jpeg')
+      },
+      {
+        pic: require('../assets/five.jpeg')
+      },
+      {
+        pic: require('../assets/champions.jpg')
+      }
+    ],
+    photos:
+    {
       trew: require('../assets/girl.jpeg')
-    }
+    },
+    drawer: null
   }),
   methods: {
-    con: function () {
-      this.$router.push({path: '/contact'})
-    },
-    about: function () {
-      this.$router.push({path: '/about'})
-    },
     home: function () {
       this.$router.push({path: '/'})
     },
-    faq: function () {
-      this.$router.push({path: '/faq'})
+    foot: function () {
+      this.$router.push({path: '/football'})
     },
-    staff: function () {
-      this.$router.push({path: '/staff'})
+    bask: function () {
+      this.$router.push({path: '/basketball'})
     },
-    prog: function () {
-      this.$router.push({path: '/progam'})
+    hoc: function () {
+      this.$router.push({path: '/hockey'})
+    },
+    ten: function () {
+      this.$router.push({path: '/tennis'})
+    },
+    rug: function () {
+      this.$router.push({path: '/rugby'})
+    },
+    qui: function () {
+      this.$router.push({path: '/quiz'})
     }
   },
   props: {
