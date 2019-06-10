@@ -81,24 +81,24 @@
           height="200px"
         >
         <v-card-text color="transparent">
-                                <v-form>
-                                    <v-text-field prepend-icon="person"
-                                    name="e-mail"
-                                    label="E-mail"
-                                    v-bind:rules="emailRules"
-                                    v-model="email"
-                                    required>
-                                    </v-text-field>
-                                    <v-text-field id="password"
-                                    prepend-icon="lock"
-                                    name="password"
-                                    label="password"
-                                    v-model="password"
-                                    v-bind:rules="passwordRules"
-                                    v-bind:type="'password'">
-                                    </v-text-field>
-                                </v-form>
-                            </v-card-text>
+          <v-form>
+            <v-text-field prepend-icon="person"
+                name="e-mail"
+                label="E-mail"
+                v-bind:rules="emailRules"
+                v-model="email"
+                required>
+              </v-text-field>
+               <v-text-field id="password"
+                prepend-icon="lock"
+                name="password"
+                label="password"
+                v-model="password"
+                v-bind:rules="passwordRules"
+                v-bind:type="'password'">
+             </v-text-field>
+           </v-form>
+          </v-card-text>
         </v-card>
 
         <v-btn
@@ -119,25 +119,25 @@
           height="200px"
         >
         <v-card-text color="black">
-                                <v-form>
-                                    <v-text-field prepend-icon="book"
-                                    name="phone"
-                                    label="Credit card no"
-                                    v-bind:rules="phoneRules"
-                                    v-model="phone"
-                                    required>
-                                    </v-text-field>
-                                    <v-text-field id="password"
-                                    prepend-icon="lock"
-                                    name="password"
-                                    label="password"
-                                    v-model="password"
-                                    v-bind:rules="passwordRules"
-                                    v-bind:type="'password'">
-                                    </v-text-field>
-                                </v-form>
-                            </v-card-text>
-        </v-card>
+          <v-form>
+            <v-text-field prepend-icon="book"
+              name="phone"
+              label="Account no"
+              v-bind:rules="phoneRules"
+              v-model="phone"
+              required>
+            </v-text-field>
+            <v-text-field id="password"
+              prepend-icon="lock"
+              name="password"
+              label="password"
+              v-model="password"
+              v-bind:rules="passwordRules"
+              v-bind:type="'password'">
+            </v-text-field>
+          </v-form>
+        </v-card-text>
+      </v-card>
 
         <v-btn
           color="primary"
@@ -154,24 +154,24 @@
       <v-stepper-content step="3">
         <v-card>
           <v-card-text color="black">
-                                <v-form>
-                                    <v-text-field prepend-icon="phone"
-                                    name="phone"
-                                    label="phone"
-                                    v-bind:rules="phoneRules"
-                                    v-model="phone"
-                                    required>
-                                    </v-text-field>
-                                    <v-text-field id="password"
-                                    prepend-icon="lock"
-                                    name="password"
-                                    label="password"
-                                    v-model="password"
-                                    v-bind:rules="passwordRules"
-                                    v-bind:type="'password'">
-                                    </v-text-field>
-                                </v-form>
-                            </v-card-text>
+            <v-form>
+             <v-text-field prepend-icon="phone"
+              name="phone"
+              label="phone"
+              v-bind:rules="phoneRules"
+              v-model="phone"
+              required>
+            </v-text-field>
+            <v-text-field id="password"
+             prepend-icon="lock"
+              name="password"
+              label="password"
+              v-model="password"
+              v-bind:rules="passwordRules"
+              v-bind:type="'password'">
+            </v-text-field>
+           </v-form>
+         </v-card-text>
         </v-card>
 
         <v-btn
