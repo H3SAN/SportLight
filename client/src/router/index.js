@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Vuetify from 'vuetify'
 import Home from '@/components/Home'
-import Basketball from '@/components/Basketball'
-import Football from '@/components/Football'
-import Hockey from '@/components/Hockey'
+import Basketball from '@/components/Basketball/Basketball'
+import Football from '@/components/Football/Football'
+import Hockey from '@/components/Hockey/Hockey'
 import Quiz from '@/components/Quiz'
-import Rugby from '@/components/Rugby'
-import Tennis from '@/components/Tennis'
+import Rugby from '@/components/Rugby/Rugby'
+import Tennis from '@/components/Tennis/Tennis'
 
 Vue.use(Router)
 Vue.use(Vuetify)

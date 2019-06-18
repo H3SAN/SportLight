@@ -100,7 +100,6 @@
            </v-form>
           </v-card-text>
         </v-card>
-
         <v-btn
           color="primary"
           @click="e1 = 2"
@@ -211,9 +210,31 @@ export default {
       }
     }
   },
+
   methods: {
     back: function () {
-      this.$router.push({ path: '/' })
+      this.$router.push({path: '/'})
+    },
+    home: function () {
+      this.$router.push({path: '/'})
+    },
+    foot: function () {
+      this.$router.push({path: '/football'})
+    },
+    bask: function () {
+      this.$router.push({path: '/basketball'})
+    },
+    hoc: function () {
+      this.$router.push({path: '/hockey'})
+    },
+    ten: function () {
+      this.$router.push({path: '/tennis'})
+    },
+    rug: function () {
+      this.$router.push({path: '/rugby'})
+    },
+    qui: function () {
+      this.$router.push({path: '/quiz'})
     }
   }
 }

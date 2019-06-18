@@ -61,7 +61,7 @@
       <v-layout justify-center align-center>
         <v-flex xs10>
           <v-content>
-          <v-carousel>
+          <v-carousel hide-controls>
                 <v-carousel-item
                  v-for="(image, i) in images"
                     :key="i"
@@ -86,21 +86,33 @@
                  <v-toolbar height="50px" color="amber">
                      <v-text><h2>Headlines: we put a very important news here</h2></v-text>
                  </v-toolbar>
-                 <v-card-media :src="photos.trew" d-inline style="height:250px; width:250px; "></v-card-media>
+                <v-layout row>
+                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:250px; width:250px;"></v-card-media>
                  <v-card-text>
-                     <p>rvhzdvinuvnuidnruiofndorfvndonv;jdnrvjne;vnzio</p>
+                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
+
+A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
+More About Computer Files
+
+Whatever program uses an individual file is responsible for understanding its contents.
+
+Similar types of files are said to be of a common "format." In most cases, the easiest way to determine a file's format is to look at the file's extension.
+Each individual file in Windows will also have a file attribute which sets a condition to the specific file...<br><a>Read More</a></p>
                  </v-card-text>
+                 </v-layout>
               </v-card>
               </v-flex>
                <v-flex>
-              <v-card height="auto" style="margin-bottom:20px;">
+              <v-card d-inline height="auto" style="margin-bottom:20px;">
                  <v-toolbar height="50px" color="amber">
                      <v-text><h2>Headlines: we put a very important news here</h2></v-text>
                  </v-toolbar>
-                 <v-card-media :src="photos.trew" d-inline style="height:250px; width:250px;"></v-card-media>
-                 <v-card-text>
+                 <v-layout row>
+                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:250px; width:250px;"></v-card-media>
+                 <v-card-text :src="photos.trew">
                      <p>rvhzdvinuvnuidnruiofndorfvndonv;jdnrvjne;vnzio</p>
                  </v-card-text>
+                 </v-layout>
               </v-card>
               </v-flex>
               <!-- Headline cards end -->
@@ -148,6 +160,7 @@ export default{
     {
       trew: require('../assets/girl.jpeg')
     },
+    
     drawer: null
   }),
   methods: {
