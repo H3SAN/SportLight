@@ -26,12 +26,28 @@
           </v-toolbar>
           <v-navigation-drawer icon v-model="drawer" clipped fixed app>
             <v-list>
-              <v-list-tile>
+              <v-list-tile v-on:click='qui'>
               <v-list-tile-action>
                 <v-icon>note</v-icon>
               </v-list-tile-action>
                <v-list-content>
                        <v-list-tile-title>Featured</v-list-tile-title>
+                   </v-list-content>
+               </v-list-tile>
+                <v-list-tile v-on:click='qui'>
+              <v-list-tile-action>
+                <v-icon>note</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Fixtures</v-list-tile-title>
+                   </v-list-content>
+               </v-list-tile>
+                <v-list-tile v-on:click='qui'>
+              <v-list-tile-action>
+                <v-icon>note</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Results</v-list-tile-title>
                    </v-list-content>
                </v-list-tile>
                <v-divider horizontal></v-divider>
@@ -67,7 +83,7 @@
                     <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                 <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
+                 <v-card-media :src="photos.pic2" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
                      <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
@@ -81,7 +97,7 @@ More About Computer Files
                <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                 <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
+                 <v-card-media :src="photos.pic1" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
                      <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
@@ -95,7 +111,7 @@ More About Computer Files
                <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                 <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
+                 <v-card-media :src="photos.pic2" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
                      <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
@@ -172,7 +188,8 @@ export default{
   data: () => ({
     photos:
     {
-      trew: require('../../assets/girl.jpeg')
+      pic1: require('../assets/girl.jpeg'),
+      pic2: require('../assets/boy.jpeg')
     },
     drawer: null
   }),

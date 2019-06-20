@@ -160,7 +160,7 @@ export default{
     {
       trew: require('../assets/girl.jpeg')
     },
-    
+
     drawer: null
   }),
   methods: {

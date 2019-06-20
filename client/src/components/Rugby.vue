@@ -172,7 +172,7 @@ export default{
   data: () => ({
     photos:
     {
-      trew: require('../../assets/girl.jpeg')
+      trew: require('../assets/girl.jpeg')
     },
     drawer: null
   }),

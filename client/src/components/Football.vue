@@ -21,6 +21,7 @@
                 <v-tab v-on:click='qui'>Quiz</v-tab>
               </v-tabs>
             </v-flex>
+              <v-btn icon flat="_blank"><v-icon v-on:click='qui'>Facebook Like</v-icon></v-btn>
             </v-layout>
             <v-spacebar></v-spacebar>
           </v-toolbar>
@@ -28,12 +29,112 @@
             <v-list>
               <v-list-tile>
               <v-list-tile-action>
-                <v-icon>note</v-icon>
+                <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Featured</v-list-tile-title>
+                       <v-list-tile-title>Transfers</v-list-tile-title>
                    </v-list-content>
-               </v-list-tile>
+                </v-list-tile>
+              <!-- Fixtures Section begins -->
+                <v-list-group  no-action value="true">
+                   <template v-slot:activator>
+          <v-list-tile>
+             <v-icon>account_circle</v-icon>
+            <v-list-tile-title>Fixtures</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Football</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Basketball</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Hockey</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Tennis</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Rugby</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+               </v-list-group>
+               <!-- Fixtures Section ends-->
+               <!-- Results Section Begins -->
+                <v-list-group  no-action value="true">
+                   <template v-slot:activator>
+          <v-list-tile>
+             <v-icon>account_circle</v-icon>
+            <v-list-tile-title>Results</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Football</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Basketball</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Hockey</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Tennis</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Rugby</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+               </v-list-group>
+               <!-- Results Section Ends -->
                <v-divider horizontal></v-divider>
                <v-list-tile>
               <v-list-tile-action>
@@ -101,7 +202,12 @@ More About Computer Files
 
 A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
 More About Computer Files
-...<br><a>Read More</a></p>
+...<br><v-dialog><template v-slot:activator="{ on }">
+        <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+      </template>
+      <v-card height="800px"><a href="">i</a></v-card>
+      </v-dialog>
+  </p>
                  </v-card-text>
                  </v-layout>
               </v-card>
@@ -172,7 +278,7 @@ export default{
   data: () => ({
     photos:
     {
-      trew: require('../../assets/girl.jpeg')
+      trew: require('../assets/girl.jpeg')
     },
     drawer: null
   }),
@@ -197,6 +303,12 @@ export default{
     },
     qui: function () {
       this.$router.push({path: '/quiz'})
+    },
+    fix: function () {
+      this.$router.push({path: '/fix'})
+    },
+    res: function () {
+      this.$router.push({path: '/res'})
     }
   },
   props: {
