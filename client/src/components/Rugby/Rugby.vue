@@ -32,7 +32,7 @@
                    </v-list-content>
                </v-list-tile>
                <v-divider horizontal></v-divider>
-               <v-list-tile v-on:click="qui">
+               <v-list-tile>
               <v-list-tile-action>
                 <v-icon>person_add</v-icon>
               </v-list-tile-action>
@@ -54,80 +54,105 @@
       </v-layout>
         <!--toolbar and menu ends-->
         <!--content begins -->
-         <!-- carousel section -->
-      <v-layout justify-center align-center>
-        <v-flex xs10>
-          <v-content>
-          <v-carousel hide-controls>
-                <v-carousel-item
-                 v-for="(image, i) in images"
-                    :key="i"
-                    :src="image.pic"
-                ></v-carousel-item>
-            </v-carousel>
-          </v-content>
-        </v-flex>
-      </v-layout>
-       <!-- carousel section ends -->
-        <v-layout justify-center align-center>
-         <v-card
-         color="amber darken-4"
-         auto-height width="1300px"
-         >
-         <v-container fluid grid-list-sm>
-       <v-layout justify-center align-center>
-           <v-flex xs10>
-               <!-- Headline cards begin -->
-             <v-flex>
+        <v-content>
+          <v-layout justify-center>
+             <!-- Main bar -->
+            <v-flex xs10 offset-md1>
+              <v-card height="auto" width="750px" color="amber">
+                <v-container>
+                   <!-- Headline cards begin -->
+                    <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
-                 <v-toolbar height="50px" color="amber">
-                     <v-text><h2>Headlines: we put a very important news here</h2></v-text>
-                 </v-toolbar>
                 <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:250px; width:250px;"></v-card-media>
+                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
                      <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
 A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
 More About Computer Files
-
-Whatever program uses an individual file is responsible for understanding its contents.
-
-S the easiest way to determine a file's format is to look at the file's extension.
-Each individual file in Windows will also have a file attribute which sets a condition to the specific file...
-        <v-dialog><template v-slot:activator="{ on }">
-        <v-btn flat v-on="on">Read More</v-btn>
-      </template>
-      <v-card height="800px"><a href="">i</a></v-card>
-      </v-dialog></p>
+...<br><a>Read More</a></p>
                  </v-card-text>
                  </v-layout>
               </v-card>
               </v-flex>
                <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
-                 <v-toolbar height="50px" color="amber">
-                     <v-text><h2>Headlines: we put a very important news here</h2></v-text>
-                 </v-toolbar>
-                 <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:250px; width:250px;"></v-card-media>
-                 <v-card-text :src="photos.trew">
-                     <p>rvhzdvinuvnuidnruiofndorfvndonv;jdnrvjne;vnzio
-                       <v-dialog><template v-slot:activator="{ on }">
-        <v-btn flat v-on="on">Read More</v-btn>
-      </template>
-      <v-card height="800px"><a href="">i</a></v-card>
-      </v-dialog></p>
+                <v-layout row>
+                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
+                 <v-card-text>
+                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
+
+A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
+More About Computer Files
+...<br><a>Read More</a></p>
                  </v-card-text>
                  </v-layout>
               </v-card>
               </v-flex>
+               <v-flex>
+              <v-card height="auto" style="margin-bottom:20px;">
+                <v-layout row>
+                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
+                 <v-card-text>
+                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
+
+A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
+More About Computer Files
+...<br><a>Read More</a></p>
+                 </v-card-text>
+                 </v-layout>
+              </v-card>
+              </v-flex>
+                   <!-- Headline cards end -->
+                </v-container>
+              </v-card>
+            </v-flex>
+            <!-- Side bar -->
+            <v-flex  xs5 offset-md1>
+              <v-card right height="auto" style="margin-right:30px" color="amber accent-1">
+                 <!-- Headline cards begin -->
+             <v-flex>
+              <v-card height="auto" style="margin-bottom:20px;">
+                 <v-card-text>
+                     <p>Champions league</p>
+                     <p>liverpool 2 - 0 Tottenham</p>
+                 </v-card-text>
+              </v-card>
+              </v-flex>
+              <v-flex>
+              <v-card height="auto" style="margin-bottom:20px;">
+                 <v-card-text>
+                     <p>club news and update shown here</p>
+                 </v-card-text>
+              </v-card>
+              </v-flex>
+              <v-flex>
+              <v-card height="auto" style="margin-bottom:20px;">
+                 <v-card-text>
+                     <p>Hazard signed to Real Madrid</p>
+                     <p>#88.5M</p>
+                 </v-card-text>
+              </v-card>
+              </v-flex>
+              <v-flex>
+              <v-card height="auto" style="margin-bottom:20px;">
+                 <v-card-text>
+                     <p>club news and update shown here</p>
+                 </v-card-text>
+              </v-card>
+              </v-flex>
+              <v-flex>
+              <v-card height="auto" style="margin-bottom:20px;">
+                 <v-card-text>
+                     <p>club news and update shown here</p>
+                 </v-card-text>
+              </v-card>
+              </v-flex>
               <!-- Headline cards end -->
-             </v-flex>
-       </v-layout>
-         </v-container>
-         </v-card>
-         </v-layout>
+              </v-card>
+            </v-flex>
+             </v-layout>
+        </v-content>
          <!-- Content Ends -->
         <!-- Footer begins -->
       <v-footer color="orange" dense fixed clipped-left app>
@@ -142,32 +167,10 @@ Each individual file in Windows will also have a file attribute which sets a con
 <script>
 export default{
   data: () => ({
-    images: [
-      {
-        //  pdf: require('../assets/don.txt'),
-        pic: require('../assets/one.jpeg')
-      },
-      {
-        pic: require('../assets/two.jpeg')
-      },
-      {
-        pic: require('../assets/three.jpeg')
-      },
-      {
-        pic: require('../assets/four.jpeg')
-      },
-      {
-        pic: require('../assets/five.jpeg')
-      },
-      {
-        pic: require('../assets/champions.jpg')
-      }
-    ],
     photos:
     {
-      trew: require('../assets/girl.jpeg')
+      trew: require('../../assets/girl.jpeg')
     },
-
     drawer: null
   }),
   methods: {

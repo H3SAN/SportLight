@@ -4,30 +4,26 @@
         <v-flex>
       <v-layout>
           <!-- Toolbar and menu begins -->
-        <v-flex xs12 sm6 offset-sm0>
+         <v-flex xs12 sm6 offset-sm0>
           <v-toolbar color="orange" dense fixed clipped-left app>
             <v-toolbar-side-icon icon @click.stop="drawer = !drawer">
             </v-toolbar-side-icon>
             <v-layout justify-center align-center>
             <v-flex xs10>
-              <v-tabs left color="transparent" text>
-                <v-tabs-slider color="white"></v-tabs-slider>
-                <v-tab v-on:click='home'>Home</v-tab>
-                <v-tab v-on:click='foot'>Football</v-tab>
-                <v-tab v-on:click='bask'>Basketball</v-tab>
-                <v-tab v-on:click='hoc'>Hockey</v-tab>
-                <v-tab v-on:click='ten'>Tennis</v-tab>
-                <v-tab v-on:click='rug'>Rugby</v-tab>
-                <v-tab v-on:click='qui'>Quiz</v-tab>
-              </v-tabs>
+                <v-btn flat v-on:click='home'>Home</v-btn>
+                <v-btn flat v-on:click='foot'>Football</v-btn>
+                <v-btn flat v-on:click='bask'>Basketball</v-btn>
+                <v-btn flat v-on:click='hoc'>Hockey</v-btn>
+                <v-btn flat v-on:click='ten'>Tennis</v-btn>
+                <v-btn flat v-on:click='rug'>Rugby</v-btn>
+                <v-btn flat v-on:click='qui'>Quiz</v-btn>
             </v-flex>
-              <v-btn icon flat="_blank"><v-icon v-on:click='qui'>Facebook Like</v-icon></v-btn>
             </v-layout>
             <v-spacebar></v-spacebar>
           </v-toolbar>
           <v-navigation-drawer icon v-model="drawer" clipped fixed app>
             <v-list>
-              <v-list-tile>
+              <v-list-tile v-on:click='ftransfer'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
@@ -43,44 +39,44 @@
             <v-list-tile-title>Fixtures</v-list-tile-title>
           </v-list-tile>
         </template>
-        <v-list-tile>
+        <v-list-tile v-on:click='fuefa'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Football</v-list-tile-title>
+                       <v-list-tile-title>UEFA Champions</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                 <v-list-tile>
+                 <v-list-tile v-on:click='fprleague'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Basketball</v-list-tile-title>
+                       <v-list-tile-title>Premier League</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                 <v-list-tile>
+                 <v-list-tile v-on:click='flaliga'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Hockey</v-list-tile-title>
+                       <v-list-tile-title>La Liga</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                <v-list-tile>
+                <v-list-tile v-on:click='fseriea'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Tennis</v-list-tile-title>
+                       <v-list-tile-title>Serie A</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                 <v-list-tile>
+                 <v-list-tile v-on:click='fafcon'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Rugby</v-list-tile-title>
+                       <v-list-tile-title>AFCON</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
                </v-list-group>
@@ -93,44 +89,44 @@
             <v-list-tile-title>Results</v-list-tile-title>
           </v-list-tile>
         </template>
-        <v-list-tile>
+        <v-list-tile v-on:click='ruefa'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Football</v-list-tile-title>
+                       <v-list-tile-title>UEFA Champions</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                 <v-list-tile>
+                 <v-list-tile v-on:click='rprleague'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Basketball</v-list-tile-title>
+                       <v-list-tile-title>Premier League</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                 <v-list-tile>
+                 <v-list-tile v-on:click='rlaliga'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Hockey</v-list-tile-title>
+                       <v-list-tile-title>La Liga</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                <v-list-tile>
+                <v-list-tile v-on:click='rseriea'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Tennis</v-list-tile-title>
+                       <v-list-tile-title>Serie A</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
-                 <v-list-tile>
+                 <v-list-tile v-on:click='rafcon'>
               <v-list-tile-action>
                 <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Rugby</v-list-tile-title>
+                       <v-list-tile-title>AFCON</v-list-tile-title>
                    </v-list-content>
                 </v-list-tile>
                </v-list-group>
@@ -162,91 +158,83 @@
           <v-layout justify-center>
              <!-- Main bar -->
             <v-flex xs10 offset-md1>
-              <v-card height="auto" width="750px" color="amber">
-                <v-container>
-                   <!-- Headline cards begin -->
-                    <v-flex>
-              <v-card height="auto" style="margin-bottom:20px;">
-                <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
-                 <v-card-text>
-                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
-
-A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
-More About Computer Files
-...<br><a>Read More</a></p>
-                 </v-card-text>
-                 </v-layout>
+              <v-card height="750px" width="700px" color="amber">
+              <v-container>
+              <v-card-text> Yesterday</v-card-text>
+              <v-card color="white">
+               <v-card-text>Arsenal - Bayern</v-card-text>
+               <v-divider></v-divider>
+               <v-card-text>Manchester UTD - Barcelona</v-card-text>
+                <v-divider></v-divider>
+               <v-card-text>Chelsea - R.Madrid</v-card-text>
+                <v-divider></v-divider>
+              </v-card>
+              <v-card-text> Today</v-card-text>
+              <v-card color="white">
+               <v-card-text>Arsenal - Bayern</v-card-text>
+               <v-divider></v-divider>
+              </v-card>
+              <v-card-text> Tomorrow</v-card-text>
+              <v-card color="white">
+               <v-card-text>Arsenal - Bayern</v-card-text>
+               <v-divider></v-divider>
+               <v-card-text>Manchester UTD - Barcelona</v-card-text>
+                <v-divider></v-divider>
+              </v-card>
+              <v-card-text> June 3rd</v-card-text>
+              <v-card color="white">
+               <v-card-text>Arsenal - Bayern</v-card-text>
+               <v-divider></v-divider>
+               <v-card-text>Manchester UTD - Barcelona</v-card-text>
+                <v-divider></v-divider>
+              </v-card>
+              </v-container>
               </v-card>
               </v-flex>
-               <v-flex>
-              <v-card height="auto" style="margin-bottom:20px;">
-                <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
-                 <v-card-text>
-                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
-
-A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
-More About Computer Files
-...<br><a>Read More</a></p>
-                 </v-card-text>
-                 </v-layout>
-              </v-card>
-              </v-flex>
-               <v-flex>
-              <v-card height="auto" style="margin-bottom:20px;">
-                <v-layout row>
-                 <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
-                 <v-card-text>
-                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
-
-A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
-More About Computer Files
-...<br><v-dialog><template v-slot:activator="{ on }">
-        <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
-      </template>
-      <v-card height="800px"><a href="">i</a></v-card>
-      </v-dialog>
-  </p>
-                 </v-card-text>
-                 </v-layout>
-              </v-card>
-              </v-flex>
-                   <!-- Headline cards end -->
-                </v-container>
-              </v-card>
-            </v-flex>
-            <!-- Side bar -->
-            <v-flex  xs5 offset-md1>
+              <v-flex xs10 offset-md1>
               <v-card right height="auto" style="margin-right:30px" color="amber accent-1">
                  <!-- Headline cards begin -->
              <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                  <v-card-text>
-                     <p>Champions league</p>
-                     <p>liverpool 2 - 0 Tottenham</p>
+                     <p>Group A</p>
+                     <p>liverpool</p>
+                     <p>Tottenham</p>
+                     <p>Chelsea</p>
+                     <p>R.Madrid</p>
                  </v-card-text>
               </v-card>
               </v-flex>
               <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                  <v-card-text>
-                     <p>club news and update shown here</p>
+                     <p>Group B</p>
+                     <p>Dortmund</p>
+                     <p>Man UTD</p>
+                     <p>Bayern</p>
+                     <p>BATH</p>
                  </v-card-text>
               </v-card>
               </v-flex>
               <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                  <v-card-text>
-                     <p>Hazard signed to Real Madrid</p>
-                     <p>#88.5M</p>
+                     <p>Group C</p>
+                     <p>Dortmund</p>
+                     <p>Man UTD</p>
+                     <p>Bayern</p>
+                     <p>BATH</p>
                  </v-card-text>
               </v-card>
               </v-flex>
               <v-flex>
               <v-card height="auto" style="margin-bottom:20px;">
                  <v-card-text>
-                     <p>club news and update shown here</p>
+                      <p>Group D</p>
+                     <p>Dortmund</p>
+                     <p>Man UTD</p>
+                     <p>Bayern</p>
+                     <p>BATH</p>
                  </v-card-text>
               </v-card>
               </v-flex>
@@ -260,8 +248,8 @@ More About Computer Files
               <!-- Headline cards end -->
               </v-card>
             </v-flex>
-             </v-layout>
-        </v-content>
+              </v-layout>
+              </v-content>
          <!-- Content Ends -->
         <!-- Footer begins -->
       <v-footer color="orange" dense fixed clipped-left app>
@@ -276,10 +264,6 @@ More About Computer Files
 <script>
 export default{
   data: () => ({
-    photos:
-    {
-      trew: require('../assets/girl.jpeg')
-    },
     drawer: null
   }),
   methods: {
@@ -304,11 +288,38 @@ export default{
     qui: function () {
       this.$router.push({path: '/quiz'})
     },
-    fix: function () {
-      this.$router.push({path: '/fix'})
+    ftransfer: function () {
+      this.$router.push({path: '/ftransfer'})
     },
-    res: function () {
-      this.$router.push({path: '/res'})
+    fuefa: function () {
+      this.$router.push({path: '/fuefa'})
+    },
+    flaliga: function () {
+      this.$router.push({path: '/flaliga'})
+    },
+    fprleague: function () {
+      this.$router.push({path: '/fprleague'})
+    },
+    fafcon: function () {
+      this.$router.push({path: '/fafcon'})
+    },
+    fseriea: function () {
+      this.$router.push({path: '/fseriea'})
+    },
+    ruefa: function () {
+      this.$router.push({path: '/ruefa'})
+    },
+    rlaliga: function () {
+      this.$router.push({path: '/rlaliga'})
+    },
+    rprleague: function () {
+      this.$router.push({path: '/rprleague'})
+    },
+    rafcon: function () {
+      this.$router.push({path: '/rafcon'})
+    },
+    rseriea: function () {
+      this.$router.push({path: '/rseriea'})
     }
   },
   props: {

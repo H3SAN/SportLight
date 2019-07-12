@@ -3,24 +3,36 @@ import Router from 'vue-router'
 import Vuetify from 'vuetify'
 
 import Home from '@/components/Home'
-import Basketball from '@/components/Basketball'
-import Football from '@/components/Football'
-import Hockey from '@/components/Hockey'
+
+//  basketball section
+import Basketball from '@/components/Basketball/Basketball'
+import BTransfers from '@/components/Basketball/BTransfers'
+
+//  football section
+import Football from '@/components/Football/Football'
+import FTransfers from '@/components/Football/FTransfers'
+import FAFCON from '@/components/Football/Fixtures/FAFCON'
+import FPremierLeague from '@/components/Football/Fixtures/FPremierLeague'
+import FUEFA from '@/components/Football/Fixtures/FUEFA'
+import FSerieA from '@/components/Football/Fixtures/FSerieA'
+import FLaLiga from '@/components/Football/Fixtures/FLaLiga'
+import RAFCON from '@/components/Football/Results/RAFCON'
+import RPremierLeague from '@/components/Football/Results/RPremierLeague'
+import RUEFA from '@/components/Football/Results/RUEFA'
+import RSerieA from '@/components/Football/Results/RSerieA'
+import RLaLiga from '@/components/Football/Results/RLaLiga'
+
+//  hockey section
+import Hockey from '@/components/Hockey/Hockey'
+
+//  rugby section
+import Rugby from '@/components/Rugby/Rugby'
+
+//  tennis section
+import Tennis from '@/components/Tennis/Tennis'
+
+//  quiz section
 import Quiz from '@/components/Quiz'
-import Rugby from '@/components/Rugby'
-import Tennis from '@/components/Tennis'
-
-import FootRes from '@/components/Results/FootRes'
-import BasketRes from '@/components/Results/BasketRes'
-import HockeyRes from '@/components/Results/HockeyRes'
-import TennisRes from '@/components/Results/TennisRes'
-import RugbyRes from '@/components/Results/RugbyRes'
-
-import FootFix from '@/components/Fixtures/FootFix'
-import BasketFix from '@/components/Fixtures/BasketFix'
-import HockeyFix from '@/components/Fixtures/HockeyFix'
-import TennisFix from '@/components/Fixtures/TennisFix'
-import RugbyFix from '@/components/Fixtures/RugbyFix'
 
 Vue.use(Router)
 Vue.use(Vuetify)
@@ -37,16 +49,79 @@ export default new Router({
       name: 'Tennis',
       component: Tennis
     },
+    //  basketball section
     {
       path: '/basketball',
       name: 'Basketball',
       component: Basketball
     },
     {
+      path: '/btransfer',
+      name: 'BTransfers',
+      component: BTransfers
+    },
+    //  football section
+    {
       path: '/football',
       name: 'Football',
       component: Football
     },
+    {
+      path: '/ftransfer',
+      name: 'FTransfers',
+      component: FTransfers
+    },
+    {
+      path: '/flaliga',
+      name: 'FLaLiga',
+      component: FLaLiga
+    },
+    {
+      path: '/fseriea',
+      name: 'FSerieA',
+      component: FSerieA
+    },
+    {
+      path: '/fprleague',
+      name: 'FPremierLeague',
+      component: FPremierLeague
+    },
+    {
+      path: '/fafcon',
+      name: 'FAFCON',
+      component: FAFCON
+    },
+    {
+      path: '/fuefa',
+      name: 'FUEFA',
+      component: FUEFA
+    },
+    {
+      path: '/rlaliga',
+      name: 'RLaLiga',
+      component: RLaLiga
+    },
+    {
+      path: '/rseriea',
+      name: 'RSerieA',
+      component: RSerieA
+    },
+    {
+      path: '/rprleague',
+      name: 'RPremierLeague',
+      component: RPremierLeague
+    },
+    {
+      path: '/rafcon',
+      name: 'RAFCON',
+      component: RAFCON
+    },
+    {
+      path: '/ruefa',
+      name: 'RUEFA',
+      component: RUEFA
+    },
+    //  hockey section
     {
       path: '/hockey',
       name: 'Hockey',
@@ -61,56 +136,6 @@ export default new Router({
       path: '/quiz',
       name: 'Quiz',
       component: Quiz
-    },
-    {
-      path: '/footres',
-      name: 'FootRes',
-      component: FootRes
-    },
-    {
-      path: '/basketRes',
-      name: 'BasketRes',
-      component: BasketRes
-    },
-    {
-      path: '/rugbyres',
-      name: 'RugbyRes',
-      component: RugbyRes
-    },
-    {
-      path: '/tennisres',
-      name: 'TennisRes',
-      component: TennisRes
-    },
-    {
-      path: '/hockeyres',
-      name: 'HockeyRes',
-      component: HockeyRes
-    },
-    {
-      path: '/footfix',
-      name: 'FootFix',
-      component: FootFix
-    },
-    {
-      path: '/basketfix',
-      name: 'BasketFix',
-      component: BasketFix
-    },
-    {
-      path: '/hockeyfix',
-      name: 'HockeyFix',
-      component: HockeyFix
-    },
-    {
-      path: '/rugbyfix',
-      name: 'RugbyFix',
-      component: RugbyFix
-    },
-    {
-      path: '/tennisfix',
-      name: 'TennisFix',
-      component: TennisFix
     }
   ]
 })

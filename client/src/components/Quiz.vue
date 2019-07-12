@@ -9,17 +9,14 @@
             <v-toolbar-side-icon icon @click.stop="drawer = !drawer">
             </v-toolbar-side-icon>
             <v-layout justify-center align-center>
-            <v-flex xs10>
-              <v-tabs left color="transparent" text>
-                <v-tabs-slider color="white"></v-tabs-slider>
-                <v-tab v-on:click='home'>Home</v-tab>
-                <v-tab v-on:click='foot'>Football</v-tab>
-                <v-tab v-on:click='bask'>Basketball</v-tab>
-                <v-tab v-on:click='hoc'>Hockey</v-tab>
-                <v-tab v-on:click='ten'>Tennis</v-tab>
-                <v-tab v-on:click='rug'>Rugby</v-tab>
-                <v-tab v-on:click='qui'>Quiz</v-tab>
-              </v-tabs>
+              <v-flex xs10>
+                <v-btn flat v-on:click='home'>Home</v-btn>
+                <v-btn flat v-on:click='foot'>Football</v-btn>
+                <v-btn flat v-on:click='bask'>Basketball</v-btn>
+                <v-btn flat v-on:click='hoc'>Hockey</v-btn>
+                <v-btn flat v-on:click='ten'>Tennis</v-btn>
+                <v-btn flat v-on:click='rug'>Rugby</v-btn>
+                <v-btn flat v-on:click='qui'>Quiz</v-btn>
             </v-flex>
             </v-layout>
             <v-spacebar></v-spacebar>

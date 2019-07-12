@@ -10,17 +10,17 @@
             </v-toolbar-side-icon>
             <v-layout justify-center align-center>
             <v-flex xs10>
-              <v-tabs left color="transparent" text>
-                <v-tabs-slider color="white"></v-tabs-slider>
-                <v-tab v-on:click='home'>Home</v-tab>
-                <v-tab v-on:click='foot'>Football</v-tab>
-                <v-tab v-on:click='bask'>Basketball</v-tab>
-                <v-tab v-on:click='hoc'>Hockey</v-tab>
-                <v-tab v-on:click='ten'>Tennis</v-tab>
-                <v-tab v-on:click='rug'>Rugby</v-tab>
-                <v-tab v-on:click='qui'>Quiz</v-tab>
-              </v-tabs>
+              <v-flex xs10>
+                <v-btn flat v-on:click='home'>Home</v-btn>
+                <v-btn flat v-on:click='foot'>Football</v-btn>
+                <v-btn flat v-on:click='bask'>Basketball</v-btn>
+                <v-btn flat v-on:click='hoc'>Hockey</v-btn>
+                <v-btn flat v-on:click='ten'>Tennis</v-btn>
+                <v-btn flat v-on:click='rug'>Rugby</v-btn>
+                <v-btn flat v-on:click='qui'>Quiz</v-btn>
             </v-flex>
+            </v-flex>
+              <v-btn icon flat="_blank"><v-icon v-on:click='qui'>Facebook Like</v-icon></v-btn>
             </v-layout>
             <v-spacebar></v-spacebar>
           </v-toolbar>
@@ -28,12 +28,112 @@
             <v-list>
               <v-list-tile>
               <v-list-tile-action>
-                <v-icon>note</v-icon>
+                <v-icon>receipt</v-icon>
               </v-list-tile-action>
                <v-list-content>
-                       <v-list-tile-title>Featured</v-list-tile-title>
+                       <v-list-tile-title>Transfers</v-list-tile-title>
                    </v-list-content>
-               </v-list-tile>
+                </v-list-tile>
+              <!-- Fixtures Section begins -->
+                <v-list-group  no-action value="true">
+                   <template v-slot:activator>
+          <v-list-tile>
+             <v-icon>account_circle</v-icon>
+            <v-list-tile-title>Fixtures</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Football</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Basketball</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Hockey</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Tennis</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Rugby</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+               </v-list-group>
+               <!-- Fixtures Section ends-->
+               <!-- Results Section Begins -->
+                <v-list-group  no-action value="true">
+                   <template v-slot:activator>
+          <v-list-tile>
+             <v-icon>account_circle</v-icon>
+            <v-list-tile-title>Results</v-list-tile-title>
+          </v-list-tile>
+        </template>
+        <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Football</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Basketball</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Hockey</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Tennis</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+                 <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>receipt</v-icon>
+              </v-list-tile-action>
+               <v-list-content>
+                       <v-list-tile-title>Rugby</v-list-tile-title>
+                   </v-list-content>
+                </v-list-tile>
+               </v-list-group>
+               <!-- Results Section Ends -->
                <v-divider horizontal></v-divider>
                <v-list-tile>
               <v-list-tile-action>
@@ -69,7 +169,7 @@
                 <v-layout row>
                  <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
-                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
+                    <h2>Person move to club</h2> <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
 A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
 More About Computer Files
@@ -83,7 +183,7 @@ More About Computer Files
                 <v-layout row>
                  <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
-                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
+                     <h2>Person loan to club</h2> <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
 A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
 More About Computer Files
@@ -97,11 +197,16 @@ More About Computer Files
                 <v-layout row>
                  <v-card-media :src="photos.trew" d-inline style="padding-left: 40px;height:150px; width:150px;"></v-card-media>
                  <v-card-text>
-                     <p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
+                      <h2>Person contract expires</h2><p>A file, in the computer world, is a self-contained piece of information available to the operating system and any number of individual programs.
 
 A computer file can be thought of much like a traditional file that one would find in an office's file cabinet. Just like an office file, information in a computer file could consist of basically anything.
 More About Computer Files
-...<br><a>Read More</a></p>
+...<br><v-dialog><template v-slot:activator="{ on }">
+        <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+      </template>
+      <v-card height="800px"><a href="">i</a></v-card>
+      </v-dialog>
+  </p>
                  </v-card-text>
                  </v-layout>
               </v-card>
@@ -172,7 +277,7 @@ export default{
   data: () => ({
     photos:
     {
-      trew: require('../assets/girl.jpeg')
+      trew: require('../../assets/girl.jpeg')
     },
     drawer: null
   }),
@@ -197,6 +302,12 @@ export default{
     },
     qui: function () {
       this.$router.push({path: '/quiz'})
+    },
+    fix: function () {
+      this.$router.push({path: '/fix'})
+    },
+    res: function () {
+      this.$router.push({path: '/res'})
     }
   },
   props: {
